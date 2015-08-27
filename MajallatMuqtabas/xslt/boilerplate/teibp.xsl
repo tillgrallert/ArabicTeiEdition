@@ -437,12 +437,9 @@
         <xsl:variable name="vFacs">
             <xsl:choose>
                 <xsl:when test="starts-with($facs,'#')">
-                    <!--<xsl:value-of select="tei:TEI/tei:facsimile/tei:surface[@xml:id=substring-after($facs,'#')]/tei:graphic[substring-after(@url,'.')='jpg'][1]/@url"/>-->
-                    <!--<xsl:text>../images/vat-arab-no259_2-3.jpg</xsl:text>-->
-                    <!-- simple counting works -->
-                    <!--<xsl:value-of select="ancestor::tei:TEI/tei:facsimile/tei:surface[4]/tei:graphic[3]/@url"/>-->
                     <xsl:variable name="vFacsID" select="substring-after($facs,'#')"/>
-                    <xsl:value-of select="ancestor::tei:TEI/tei:facsimile/tei:surface[@xml:id=$vFacsID]/tei:graphic[3]/@url"/>
+                    <xsl:variable name="vMimeType" select="'image/jpeg'"/>
+                    <xsl:value-of select="ancestor::tei:TEI/tei:facsimile/tei:surface[@xml:id=$vFacsID]/tei:graphic[@mimeType=$vMimeType][1]/@url"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="$facs"/>
