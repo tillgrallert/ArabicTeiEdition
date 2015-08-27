@@ -1,0 +1,12 @@
+/* Place project-specific CSS here */
+[lang="ar"], [lang="ota"] {
+    direction:rtl;
+    /*text-align:right;*/
+    font-family:"Scheherazade", "Lateef", Sans-Serif, Serif;
+    font-weight:normal;
+}
+[lang="en"], [lang="fr"], [lang="ar-Latn-x-ijmes"] {
+    direction:ltr;
+    /*text-align:right;*/
+    /*font-size:110%;*/
+}
