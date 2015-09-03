@@ -1,0 +1,20 @@
+/* anonymous blocks <ab> */
+
+ab {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* tables */
+
+table {
+	border-collapse: collapse;
+	width:80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+cell {
+	display: table-cell;
+	width: auto;
+}
