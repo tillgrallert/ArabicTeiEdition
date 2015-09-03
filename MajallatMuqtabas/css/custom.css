@@ -38,9 +38,49 @@ html {
 body, #tei_wrapper {
 	background-color: white;
 }
+head {
+	background-color: orange;
+	color: white;
+
+}
 /* have heads stick to the borders of the html */
 div > head{
-    text-indent:1em;
+    text-indent:0;
+    display: block;
+    position: relative;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	width:inherit;
+	right: 0em;
+}
+
+
+/* levels of heads */
+
+body > div > head {
+	font-size: 2em;
+}
+body > div > div > head {
+	font-size: 1.5em;
+}
+body > div > div > div > head {
+	font-size: 1.3em;
+}
+body > div > div > div > div > head {
+	font-size: 1.1em;
+}
+
+/* link back to the top of the page */
+
+a.cBackToTop {
+	display: block;
+	padding-top: 0.5em;
+	text-align: left;
+	font-size: 0.5em;
+}
+
+a.cBackToTop:after {
+	content: "back to top"
 }
 
 /* footnote anchors */

@@ -124,7 +124,9 @@ nav:hover li > a{
     color:#999;
     border:1px solid #e5e5e5;
 }
-nav li > a:hover{
+nav:hover li > a:hover{
+	display:block;
+	width: inherit;
     background-color:highlight;
     color:highlighttext;
     text-decoration:none;

@@ -511,8 +511,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <!-- add the @lang attribute to the <body> -->
-    <xsl:template match="tei:body">
+    <!-- add the @lang attribute to the <text> -->
+    <xsl:template match="tei:text">
         <xsl:copy>
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
@@ -522,16 +522,20 @@
     </xsl:template>
     <!-- provide a toc-style navigation -->
     <xsl:variable name="vNav">
-        <nav>
-            <ul>
-                <xsl:apply-templates mode="mToc"
-                    select="/descendant::tei:body/tei:div"/>
-            </ul>
-        </nav>
+        <xsl:if test="/descendant::tei:body/descendant::tei:head">
+            <nav>
+                <ul>
+                    <xsl:apply-templates mode="mToc"
+                        select="/descendant::tei:body/tei:div"/>
+                </ul>
+            </nav>
+        </xsl:if>
     </xsl:variable>
    
     <!-- create a sub-list and list item (li) for each bill, section, or article -->
-    <xsl:template match="tei:div[@type='bill'] | tei:div[@type='section'] | tei:div[@type='article']" mode="mToc">
+    <!-- the type attributes are dependent on the schema tei_jaraid.rng -->
+    <!--  <xsl:template match="tei:div[@type='bill'] | tei:div[@type='section'] | tei:div[@type='article']" mode="mToc"> -->
+    <xsl:template match="tei:div" mode="mToc">
         <li>
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
@@ -563,6 +567,8 @@
                 <xsl:apply-templates/>
             <!--</a>-->
         </xsl:element>
+        <!-- link to the top of the page, content can be provided by css -->
+        <a class="cBackToTop cInterface" href="#" title="To the top of this page"> </a>
     </xsl:template>
     
     <!-- do something with notes -->
@@ -576,11 +582,11 @@
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
             </xsl:call-template>
-            <a href="#fn-mark-{generate-id()}" class="cFnMark"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
+            <a href="#fn-mark-{generate-id()}" class="cFnMark cContent"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
             <xsl:apply-templates/>
         </p>
     </xsl:template>
     <xsl:template match="tei:body//tei:note">
-        <a href="#fn-{generate-id()}" id="fn-mark-{generate-id()}" class="cFnMark"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
+        <a href="#fn-{generate-id()}" id="fn-mark-{generate-id()}" class="cFnMark cContent"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
     </xsl:template>
 </xsl:stylesheet>
