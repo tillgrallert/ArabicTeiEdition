@@ -30,7 +30,12 @@
     </xsl:param>
     <!-- interface text -->
     <xsl:param name="pbNote">
-        <text>page: </text>
+        <span class="-teibp-pbNote">
+            <xsl:attribute name="lang">
+                <xsl:text>en</xsl:text>
+            </xsl:attribute>
+            <text>page: </text>
+        </span>
     </xsl:param>
     <xsl:param name="altTextPbFacs">
         <text>view page image(s)</text>
@@ -42,15 +47,15 @@
 		
 	-->
     <xsl:param name="filePrefix" select="'..'"/>
-    <xsl:param name="teibpCSS" select="concat($filePrefix,'/css/teibp.css')"/>
-    <xsl:param name="customCSS" select="concat($filePrefix,'/css/custom.css')"/>
-    <xsl:param name="jqueryJS" select="concat($filePrefix,'/js/jquery/jquery.min.js')"/>
+    <xsl:param name="teibpCSS" select="concat($filePrefix, '/css/teibp.css')"/>
+    <xsl:param name="customCSS" select="concat($filePrefix, '/css/custom.css')"/>
+    <xsl:param name="jqueryJS" select="concat($filePrefix, '/js/jquery/jquery.min.js')"/>
     <xsl:param name="jqueryBlockUIJS"
-        select="concat($filePrefix,'/js/jquery/plugins/jquery.blockUI.js')"/>
-    <xsl:param name="teibpJS" select="concat($filePrefix,'/js/teibp.js')"/>
-    <xsl:param name="theme.default" select="concat($filePrefix,'/css/teibp.css')"/>
-    <xsl:param name="theme.sleepytime" select="concat($filePrefix,'/css/sleepy.css')"/>
-    <xsl:param name="theme.terminal" select="concat($filePrefix,'/css/terminal.css')"/>
+        select="concat($filePrefix, '/js/jquery/plugins/jquery.blockUI.js')"/>
+    <xsl:param name="teibpJS" select="concat($filePrefix, '/js/teibp.js')"/>
+    <xsl:param name="theme.default" select="concat($filePrefix, '/css/teibp.css')"/>
+    <xsl:param name="theme.sleepytime" select="concat($filePrefix, '/css/sleepy.css')"/>
+    <xsl:param name="theme.terminal" select="concat($filePrefix, '/css/terminal.css')"/>
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
         <xd:desc>
             <xd:p>Match document root and create and html5 wrapper for the TEI document, which is
@@ -94,6 +99,9 @@
             <xsl:apply-templates select="@*"/>
             <xsl:call-template name="addID"/>
             <xsl:call-template name="rendition"/>
+            <xsl:call-template name="templHtmlAttrLang">
+                <xsl:with-param name="pInput" select="."/>
+            </xsl:call-template>
             <xsl:apply-templates select="node()"/>
         </xsl:element>
     </xsl:template>
@@ -111,7 +119,7 @@
     <xsl:template match="tei:teiHeader//tei:title">
         <tei-title>
             <xsl:call-template name="addID"/>
-            <xsl:apply-templates select="@*|node()"/>
+            <xsl:apply-templates select="@* | node()"/>
         </tei-title>
     </xsl:template>
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
@@ -135,7 +143,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy>
-                    <xsl:apply-templates select="@*|node()"/>
+                    <xsl:apply-templates select="@* | node()"/>
                 </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
@@ -169,9 +177,12 @@
         <a href="{@target}">
             <xsl:apply-templates select="@*"/>
             <xsl:call-template name="rendition"/>
-            <xsl:apply-templates select="node()"/>
+            <xsl:apply-templates select="@* | node()"/>
+            <!-- <xsl:apply-templates select="node()"/> -->
         </a>
     </xsl:template>
+    <!-- prevent @target from being reproduced here -->
+    <xsl:template match="tei:ref/@target"/>
     <xd:doc>
         <xd:desc>
             <xd:p>Transforms TEI ptr element to html a (link) element.</xd:p>
@@ -196,7 +207,7 @@
             <xsl:call-template name="addID"/>
             <figure>
                 <img alt="{normalize-space(tei:figDesc)}" src="{tei:graphic/@url}"/>
-                <xsl:apply-templates select="*[ not( self::tei:graphic | self::tei:figDesc ) ]"/>
+                <xsl:apply-templates select="*[not(self::tei:graphic | self::tei:figDesc)]"/>
             </figure>
         </xsl:copy>
     </xsl:template>
@@ -258,9 +269,9 @@
     <xsl:template name="generate-unique-id">
         <xsl:param name="root"/>
         <xsl:param name="suffix"/>
-        <xsl:variable name="id" select="concat($root,$suffix)"/>
+        <xsl:variable name="id" select="concat($root, $suffix)"/>
         <xsl:choose>
-            <xsl:when test="key('ids',$id)">
+            <xsl:when test="key('ids', $id)">
                 <!--
 				<xsl:message>
 					<xsl:value-of select="concat('Found duplicate id: ',$id)"/>
@@ -268,7 +279,7 @@
 				-->
                 <xsl:call-template name="generate-unique-id">
                     <xsl:with-param name="root" select="$root"/>
-                    <xsl:with-param name="suffix" select="concat($suffix,'f')"/>
+                    <xsl:with-param name="suffix" select="concat($suffix, 'f')"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
@@ -311,8 +322,8 @@
     <!-- tag usage support -->
     <xsl:template name="tagUsage2style">
         <style id="tagusage-css" type="text/css">
-      <xsl:for-each select="//tei:namespace[@name ='http://www.tei-c.org/ns/1.0']/tei:tagUsage">
-        <xsl:value-of select="concat('&#x000a;',@gi,' { ')"/>
+      <xsl:for-each select="//tei:namespace[@name = 'http://www.tei-c.org/ns/1.0']/tei:tagUsage">
+        <xsl:value-of select="concat('&#x000a;', @gi, ' { ')"/>
         <xsl:call-template name="tokenize">
           <xsl:with-param name="string" select="@render"/>
         </xsl:call-template>
@@ -327,7 +338,7 @@
             <xsl:when test="$delimiter and contains($string, $delimiter)">
                 <xsl:call-template name="grab-css">
                     <xsl:with-param name="rendition-id"
-                        select="substring-after(substring-before($string, $delimiter),'#')"/>
+                        select="substring-after(substring-before($string, $delimiter), '#')"/>
                 </xsl:call-template>
                 <xsl:text> </xsl:text>
                 <xsl:call-template name="tokenize">
@@ -337,29 +348,30 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="grab-css">
-                    <xsl:with-param name="rendition-id" select="substring-after($string,'#')"/>
+                    <xsl:with-param name="rendition-id" select="substring-after($string, '#')"/>
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     <xsl:template name="grab-css">
         <xsl:param name="rendition-id"/>
-        <xsl:value-of select="normalize-space(key('ids',$rendition-id)/text())"/>
+        <xsl:value-of select="normalize-space(key('ids', $rendition-id)/text())"/>
     </xsl:template>
     <xsl:template match="tei:rendition[@xml:id and @scheme = 'css']" mode="rendition2style">
-        <xsl:value-of select="concat('[rendition~=&quot;#',@xml:id,'&quot;]')"/>
+        <xsl:value-of select="concat('[rendition~=&quot;#', @xml:id, '&quot;]')"/>
         <xsl:if test="@scope">
-            <xsl:value-of select="concat(':',@scope)"/>
+            <xsl:value-of select="concat(':', @scope)"/>
         </xsl:if>
-        <xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
+        <xsl:value-of select="concat('{ ', normalize-space(.), '}&#x000A;')"/>
     </xsl:template>
     <xsl:template match="tei:rendition[not(@xml:id) and @scheme = 'css' and @corresp]"
         mode="rendition2style">
-        <xsl:value-of select="concat('[rendition~=&quot;#',substring-after(@corresp,'#'),'&quot;]')"/>
+        <xsl:value-of
+            select="concat('[rendition~=&quot;#', substring-after(@corresp, '#'), '&quot;]')"/>
         <xsl:if test="@scope">
-            <xsl:value-of select="concat(':',@scope)"/>
+            <xsl:value-of select="concat(':', @scope)"/>
         </xsl:if>
-        <xsl:value-of select="concat('{ ',normalize-space(.),'}&#x000A;')"/>
+        <xsl:value-of select="concat('{ ', normalize-space(.), '}&#x000A;')"/>
     </xsl:template>
     <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
         <xd:desc>
@@ -411,11 +423,11 @@
         <!-- dealing with pointers instead of full URLs in @facs -->
         <xsl:variable name="vFacs">
             <xsl:choose>
-                <xsl:when test="starts-with($facs,'#')">
-                    <xsl:variable name="vFacsID" select="substring-after($facs,'#')"/>
+                <xsl:when test="starts-with($facs, '#')">
+                    <xsl:variable name="vFacsID" select="substring-after($facs, '#')"/>
                     <xsl:variable name="vMimeType" select="'image/jpeg'"/>
                     <xsl:value-of
-                        select="ancestor::tei:TEI/tei:facsimile/tei:surface[@xml:id=$vFacsID]/tei:graphic[@mimeType=$vMimeType][1]/@url"
+                        select="ancestor::tei:TEI/tei:facsimile/tei:surface[@xml:id = $vFacsID]/tei:graphic[@mimeType = $vMimeType][1]/@url"
                     />
                 </xsl:when>
                 <xsl:otherwise>
@@ -425,9 +437,7 @@
         </xsl:variable>
         <span class="-teibp-pageNum">
             <!-- <xsl:call-template name="atts"/> -->
-            <span class="-teibp-pbNote">
-                <xsl:value-of select="$pbNote"/>
-            </span>
+            <xsl:copy-of select="$pbNote"/>
             <xsl:value-of select="@n"/>
             <xsl:text> </xsl:text>
         </span>
@@ -435,7 +445,7 @@
             <a class="gallery-facs" rel="prettyPhoto[gallery1]">
                 <xsl:attribute name="onclick">
                     <xsl:value-of
-                        select="concat('showFacs(',$apos,$n,$apos,',',$apos,$vFacs,$apos,',',$apos,$id,$apos,')')"
+                        select="concat('showFacs(', $apos, $n, $apos, ',', $apos, $vFacs, $apos, ',', $apos, $id, $apos, ')')"
                     />
                 </xsl:attribute>
                 <img alt="{$altTextPbFacs}" class="-teibp-thumbnail">
@@ -473,7 +483,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:copy>
-                    <xsl:apply-templates select="@*|node()"/>
+                    <xsl:apply-templates select="@* | node()"/>
                 </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
@@ -494,8 +504,13 @@
 			<xsl:value-of select="."/>
 		</xsl:comment>
     </xsl:template>
-    <!-- support for rtl-languages such as Arabic -->
-    <!-- template to add the HTML @lang attribute based on the containing element -->
+    
+    <xd:doc xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl">
+        <xd:desc>
+            <xd:p>This template adds support for rtl-languages such as Arabic. It generates a HTML @lang attribute based on the containing element's @xml:lang attribute. It is called in the for every element in the "teipb-default" template</xd:p>
+        </xd:desc>
+        <xd:param name="pInput">Any node() or text()</xd:param>
+    </xd:doc>
     <xsl:template name="templHtmlAttrLang">
         <xsl:param name="pInput"/>
         <xsl:choose>
@@ -506,32 +521,23 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:attribute name="lang">
-                    <xsl:value-of select="ancestor::node()[@xml:lang!=''][1]/@xml:lang"/>
+                    <xsl:value-of select="ancestor::node()[@xml:lang != ''][1]/@xml:lang"/>
                 </xsl:attribute>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <!-- add the @lang attribute to the <text> -->
-    <xsl:template match="tei:text">
-        <xsl:copy>
-            <xsl:call-template name="templHtmlAttrLang">
-                <xsl:with-param name="pInput" select="."/>
-            </xsl:call-template>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-    </xsl:template>
+
     <!-- provide a toc-style navigation -->
     <xsl:variable name="vNav">
         <xsl:if test="/descendant::tei:body/descendant::tei:head">
             <nav>
                 <ul>
-                    <xsl:apply-templates mode="mToc"
-                        select="/descendant::tei:body/tei:div"/>
+                    <xsl:apply-templates mode="mToc" select="/descendant::tei:body/tei:div"/>
                 </ul>
             </nav>
         </xsl:if>
     </xsl:variable>
-   
+
     <!-- create a sub-list and list item (li) for each bill, section, or article -->
     <!-- the type attributes are dependent on the schema tei_jaraid.rng -->
     <!--  <xsl:template match="tei:div[@type='bill'] | tei:div[@type='section'] | tei:div[@type='article']" mode="mToc"> -->
@@ -564,13 +570,13 @@
             </xsl:attribute>
             <!-- with a slide-out navigation back links are not necessary -->
             <!--<a href="#toc-{generate-id()}">-->
-                <xsl:apply-templates/>
+            <xsl:apply-templates/>
             <!--</a>-->
         </xsl:element>
         <!-- link to the top of the page, content can be provided by css -->
         <a class="cBackToTop cInterface" href="#" title="To the top of this page"> </a>
     </xsl:template>
-    
+
     <!-- do something with notes -->
     <xsl:variable name="vNotes">
         <div id="teibp_notes">
@@ -582,11 +588,15 @@
             <xsl:call-template name="templHtmlAttrLang">
                 <xsl:with-param name="pInput" select="."/>
             </xsl:call-template>
-            <a href="#fn-mark-{generate-id()}" class="cFnMark cContent"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
+            <a href="#fn-mark-{generate-id()}" class="cFnMark cContent">
+                <xsl:value-of select="count(preceding::tei:note[ancestor::tei:body]) + 1"/>
+            </a>
             <xsl:apply-templates/>
         </p>
     </xsl:template>
     <xsl:template match="tei:body//tei:note">
-        <a href="#fn-{generate-id()}" id="fn-mark-{generate-id()}" class="cFnMark cContent"><xsl:value-of select="count(preceding::tei:note[ancestor::tei:body])+1"/></a>
+        <a href="#fn-{generate-id()}" id="fn-mark-{generate-id()}" class="cFnMark cContent">
+            <xsl:value-of select="count(preceding::tei:note[ancestor::tei:body]) + 1"/>
+        </a>
     </xsl:template>
 </xsl:stylesheet>

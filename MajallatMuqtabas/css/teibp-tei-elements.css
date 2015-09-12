@@ -1,3 +1,39 @@
+/*-----------------------
+teipb, the main stylesheet surpresses the display of quite a few tei elements
+-------------------------*/
+
+/*-----------------------
+display the information on a file's source
+-------------------------*/
+/* a) by means of sourceDesc */
+sourceDesc, sourceDesc > * {
+    display:block;
+}
+
+sourceDesc bibl, sourceDesc biblStruct, sourceDesc bibl > *, sourceDesc biblStruct > *, sourceDesc biblStruct monogr  > *, sourceDesc biblStruct imprint  > * {
+    display:block;
+}
+
+sourceDesc tei-title {
+    font-size:1.5em;
+    font-weight:bold; 
+}
+
+sourceDesc tei-title[type="sub"] {
+    font-size:1.2em;
+    font-weight: bold;
+    
+}
+
+sourceDesc editor:after {
+	content: " (ed.)"
+}
+/* b) by means of .cSource */
+div.cSource, div.cSource > div {
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
 /* anonymous blocks <ab> */
 
 ab {

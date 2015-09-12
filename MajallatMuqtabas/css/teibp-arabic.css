@@ -2,17 +2,26 @@
 [lang = "ar"]{
     direction:rtl;
     text-align:right;
-    font-size:1.2em;
+    /*keep in mind that relative sizes (%, em) accumulate for nested elements and must thus be avoided */
+    font-size:18px;
 }
 [lang = "en"]{
     direction:ltr;
     text-align:left;
-    font-size:12px;
+    font-size:14px;
 }
+[lang="ar-Latn-x-ijmes"] {
+    font-style:italic;
+}
+/* change markers for quotes based on language */
+q[lang="ar"] {
+    quotes: "\00AB" "\00BB";
+}
+
 /* account for qaṣīdas */
-lg[type = "bayt"]{
+lg[type="bayt"]{
     clear:both;
-    padding-right:2em;
+    margin-right:3em;
 }
 lg[type = "bayt"] > l{
     /*position:relative;*/
