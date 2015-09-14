@@ -38,7 +38,7 @@ lg[type = "bayt"] > l:last-child{
     clear:left;
 }
 div,
-p{
+p, ab {
     clear:both;
 }
 /* omit shemala page breaks */
