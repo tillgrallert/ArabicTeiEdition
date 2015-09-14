@@ -1,3 +1,12 @@
+/* make sure not to color etc. entities in heads */
+head * {
+    color:inherit;
+    background-color: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
 /* have heads stick to the borders of the html */
 div > head{
     text-indent:0;
