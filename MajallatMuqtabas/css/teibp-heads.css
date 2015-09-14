@@ -1,10 +1,10 @@
-/* make sure not to color etc. entities in heads */
+/* make sure not to color etc. entities in heads. The !important flag is brutal and overrides any more specific rules */
 head * {
-    color:inherit;
-    background-color: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
+    color:inherit !important;
+    background-color: inherit !important;
+    font-size: inherit !important;
+    font-style: inherit !important;
+    font-weight: inherit !important;
 }
 
 /* have heads stick to the borders of the html */

@@ -1,9 +1,9 @@
 /*-----------------------
-teipb, the main stylesheet, surpresses the display of quite a few tei elements
+teipb, the main stylesheet surpresses the display of quite a few tei elements
 -------------------------*/
 
 /*-----------------------
-display information on a file's source
+display the information on a file's source
 -------------------------*/
 /* a) by means of sourceDesc */
 sourceDesc, sourceDesc > * {
@@ -33,6 +33,30 @@ div.cSource, div.cSource > div {
     margin-top:0.5em;
     margin-bottom:0.5em;
 }
+/*-----------------------
+elements in the text
+-------------------------*/
+
+text, body, front, back {
+	counter-reset: p;
+}
+
+p{
+    counter-increment: p;
+}
+text p:before {
+	content: "§ " counter(p) " ";
+	direction:ltr;
+	/* vertical-align:top; */
+	font-size: 0.5em;
+	display: block;
+	position: absolute;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	margin-top: 0.5em;
+	margin-right: -40px;
+	color: gray;
+}
 
 /* anonymous blocks <ab> */
 
@@ -55,12 +79,11 @@ cell {
 	width: auto;
 }
 
-/*-------------------------
-named entities
---------------------------- */
+/*------------------
+ named entities
+-------------------- */
 text persName {
 	color:#1B8500;
-	font-size: inherit;
 }
 text placeName {
 	color:#9525A1;
@@ -68,14 +91,7 @@ text placeName {
 text orgName {
 	color:#5F789E;
 }
-/* make sure not to color entities in heads */
-head * {
-	color:inherit;
-	background-color: inherit;
-	font-size: inherit;
-	font-style: inherit;
-	font-weight: inherit;
-}
+
 /* display tooltip-like information on the tag */
 text[lang="ar"] persName:hover:after, text[lang="ar"] placeName:hover:after,text[lang="ar"] orgName:hover:after {
 	display:inline-block;
