@@ -166,6 +166,7 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
+            <change when="2015-09-14" who="#pers_TG">Made corrections to the mark-up</change>
             <change when="2015-09-12" who="#pers_TG">Made significant changes to the bibliographic information in <gi>biblStruct</gi> in the <gi>teiHeader</gi> and added some language information for English and French in Arabic script</change>
             <change when="2015-09-10" who="#pers_TG">Completed strutural mark-up</change>
             <change when="2015-09-03" who="#pers_TG">Added structural mark-up to the first article. Made some corrections and added
@@ -1926,8 +1927,8 @@
                 </div>
                 <div type="article">
                     <head>لحم الكلاب</head>
-                    <p>انتشر أكل لحم الكلاب في ألمانيا ولا سيما في إمارة ساكس ولحمها أغلى من لحم الخيل ويذبحون سبعة آلاف كلب كل سنة في تلك
-                        الإمارة لتناول لحومها.</p>
+                    <p>انتشر أكل لحم الكلاب في <placeName>ألمانيا</placeName> ولا سيما في <placeName><orgName>إمارة</orgName>
+                        ساكس</placeName> ولحمها أغلى من لحم الخيل ويذبحون سبعة آلاف كلب كل سنة في تلك الإمارة لتناول لحومها.</p>
                 </div>
                 <div type="article">
                     <head>سكان <placeName>الولايات المتحدة</placeName></head>
@@ -2200,7 +2201,7 @@
                         أن نكون نحن آخر من يفكرون في احتذاء ذاك المثال النافع والهدي الرافع.</p>
                 </div>
                 <div type="article">
-                    <p>لغة دولية مزدوجة</p>
+                    <head>لغة دولية مزدوجة</head>
                     <p>عرض جماعة من العلماء سنة 1900 مشروعاً نافعاً في ربط عهود الوفاق بين كل من فرنسا وانكلترا والولايات المتحدة الأميركية
                         وهو أن تتداول حكومات هذه الممالك في عقد عهد تضطر بها كل منها أمتها أن تتعلم لغة الأخرى إجبارياً في المدارس فكما
                         يتعلم الانكليزي والأميركي اللغة الانكليزية في مدارس بلاده يتعلم اللغة الافرنسية كذلك وكما يتعلم الافرنسي لغته في
