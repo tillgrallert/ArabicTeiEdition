@@ -39,10 +39,9 @@ html {
 body, #tei_wrapper {
 	background-color: white;
 }
-head {
+head, head * {
 	background-color: orange;
 	color: white;
-
 }
 
 /* footnote anchors */
