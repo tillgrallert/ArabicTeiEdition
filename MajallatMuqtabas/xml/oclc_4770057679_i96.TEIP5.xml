@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://rawgit.com/tillgrallert/TeachingTei/master/schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/boilerplate/custom.xsl"?>
-<TEI xmlns:tei="http://www.tei-c.org/ns/1.0"
-     xmlns:html="http://www.w3.org/1999/xhtml"
-     xmlns:xd="http://www.pnp-software.com/XSLTdoc"
-     xmlns:opf="http://www.idpf.org/2007/opf"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns="http://www.tei-c.org/ns/1.0">
-=======
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://rawgit.com/tillgrallert/TeachingTei/master/schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
->>>>>>> master
+<?xml-stylesheet type="text/xsl" href="../../boilerplate/custom.xsl"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
    <teiHeader xml:lang="en">
         <fileDesc xml:lang="en">
             <titleStmt xml:lang="en">
@@ -206,22 +193,6 @@
             <change when="2015-08-24" who="#pers_TG" xml:lang="en">Created this TEI P5 file by automatic conversion from ePub using custom XSLT.</change>
         </revisionDesc>
     </teiHeader>
-<<<<<<< HEAD
-   <text xml:id="oclc_4770057679_i96_text"
-         xml:lang="ar"
-         type="issue"
-         n="i96">
-                <front>
-                    <div>
-                        <biblStruct>
-                            <monogr>
-                                <title level="j">المقتبس</title>
-                                <editor><persName xml:lang="ar"><forename>محمد</forename> <surname>كرد علي</surname></persName></editor>
-                                <imprint>
-                                    <pubPlace><placeName xml:lang="ar">دمشق</placeName></pubPlace>
-                                    <date when="1915-01-01">بتاريخ: 1 - 1 - 1915</date>
-                                    <biblScope n="96" unit="issue">العدد 96</biblScope>
-=======
    <text xml:id="oclc_4770057679_i96_text" xml:lang="ar" type="issue" n="i96">
                 <front xml:lang="ar">
                     <div xml:lang="ar">
@@ -233,7 +204,6 @@
                                     <pubPlace xml:lang="ar"><placeName xml:lang="ar">دمشق</placeName></pubPlace>
                                     <date when="1915-01-01" xml:lang="ar">بتاريخ:  <tei:num value="1" xml:lang="ar">١</tei:num>  -  <tei:num value="1" xml:lang="ar">١</tei:num>  -  <tei:num value="1915" xml:lang="ar">١٩١٥</tei:num> </date>
                                     <biblScope n="96" unit="issue" xml:lang="ar">العدد  <tei:num value="96" xml:lang="ar">٩٦</tei:num> </biblScope>
->>>>>>> master
                                 </imprint>
                             </monogr>
                         </biblStruct>

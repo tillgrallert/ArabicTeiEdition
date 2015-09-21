@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://rawgit.com/tillgrallert/TeachingTei/master/schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/boilerplate/custom.xsl"?>
-<TEI xmlns:tei="http://www.tei-c.org/ns/1.0"
-     xmlns:html="http://www.w3.org/1999/xhtml"
-     xmlns:xd="http://www.pnp-software.com/XSLTdoc"
-     xmlns:opf="http://www.idpf.org/2007/opf"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:xi="http://www.w3.org/2001/XInclude"
-     xmlns="http://www.tei-c.org/ns/1.0">
-=======
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://rawgit.com/tillgrallert/TeachingTei/master/schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
->>>>>>> master
+<?xml-stylesheet type="text/xsl" href="../../boilerplate/custom.xsl"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
     <teiHeader xml:lang="en">
         <fileDesc xml:lang="en">
             <titleStmt xml:lang="en">
@@ -720,19 +707,6 @@
         </tei:surface>
     </facsimile>
     <text xml:id="oclc_4770057679_i60_text" xml:lang="ar" type="issue" n="i60">
-<<<<<<< HEAD
-        <front>
-            <div>
-                <biblStruct>
-                    <monogr>
-                        <title level="j">المقتبس</title>
-                        <editor><persName>محمد كرد علي</persName></editor>
-                        <imprint>
-                            <pubPlace><placeName xml:lang="ar">دمشق</placeName></pubPlace>
-                            <publisher><orgName>المطبعة المقتبس</orgName></publisher>
-                            <date when-custom="1329-01-01" datingMethod="#cal_islamic"
-                                calendar="#cal_islamic" when="1911-01-02">١ محرم ١٣٢٩</date>
-=======
         <front xml:lang="ar">
             <div xml:lang="ar">
                 <biblStruct xml:lang="ar">
@@ -743,7 +717,6 @@
                             <pubPlace xml:lang="ar"><placeName xml:lang="ar">دمشق</placeName></pubPlace>
                             <publisher xml:lang="ar"><orgName xml:lang="ar">المطبعة المقتبس</orgName></publisher>
                             <date when-custom="1329-01-01" datingMethod="#cal_islamic" calendar="#cal_islamic" when="1911-01-02" xml:lang="ar"> <tei:num value="1" xml:lang="ar">١</tei:num> محرم <tei:num value="1329" xml:lang="ar">١٣٢٩</tei:num> </date>
->>>>>>> master
                         </imprint>
                         <biblScope unit="volume" n="6" xml:lang="ar">المجلد السادس</biblScope>
                         <biblScope unit="issue" n="1" xml:lang="ar">الجزء الاول</biblScope>

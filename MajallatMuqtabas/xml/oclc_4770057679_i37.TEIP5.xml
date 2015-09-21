@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://rawgit.com/tillgrallert/TeachingTei/master/schema/tei_jaraid.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
+<?xml-stylesheet type="text/xsl" href="../../boilerplate/custom.xsl"?><TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0" >
     <teiHeader xml:lang="en">
         <fileDesc xml:lang="en">
             <titleStmt xml:lang="en">
@@ -538,20 +538,6 @@
         </tei:surface>
     </tei:facsimile>
     <text xml:id="oclc_4770057679_i37_text" xml:lang="ar" type="issue" n="i37">
-<<<<<<< HEAD
-        <front>
-            <div>
-                <biblStruct>
-                    <monogr>
-                        <title level="j">المقتبس</title>
-                        <editor><persName xml:lang="ar"><forename>محمد</forename> <surname>كرد علي</surname></persName></editor>
-                        <imprint>
-                            <pubPlace><placeName xml:lang="ar">دمشق</placeName></pubPlace>
-                            <publisher>المطبعة المقتبس</publisher>
-                            <date when-custom="1327-01-01" datingMethod="#cal_islamic" calendar="#cal_islamic" when="1909-01-23">١ محرم ١٣٢٧ </date>
-                            <biblScope unit="volume" n="4">المجلد الرابع</biblScope>
-                            <biblScope n="1" unit="issue">الجزء الاول</biblScope>
-=======
         <front xml:lang="ar">
             <div xml:lang="ar">
                 <biblStruct xml:lang="ar">
@@ -564,7 +550,6 @@
                             <date when-custom="1327-01-01" datingMethod="#cal_islamic" calendar="#cal_islamic" when="1909-01-23" xml:lang="ar"> <tei:num value="1" xml:lang="ar">١</tei:num>  محرم  <tei:num value="١٣٢٧" xml:lang="ar">١٣٢٧</tei:num>  </date>
                             <biblScope unit="volume" n="4" xml:lang="ar">المجلد الرابع</biblScope>
                             <biblScope n="1" unit="issue" xml:lang="ar">الجزء الاول</biblScope>
->>>>>>> master
                         </imprint>
                     </monogr>
                 </biblStruct>
