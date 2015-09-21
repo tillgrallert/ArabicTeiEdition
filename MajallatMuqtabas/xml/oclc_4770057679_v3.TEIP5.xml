@@ -189,40 +189,40 @@
   <text xml:lang="ar" type="volume" n="3">
       <group>
           <xi:include href="oclc_4770057679_i25.TEIP5.xml"
-              xpointer="oclc_4770057679_i25_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i26.TEIP5.xml"
-              xpointer="oclc_4770057679_i26_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i27.TEIP5.xml"
-              xpointer="oclc_4770057679_i27_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i28.TEIP5.xml"
-              xpointer="oclc_4770057679_i28_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i29.TEIP5.xml"
-              xpointer="oclc_4770057679_i29_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i30.TEIP5.xml"
-              xpointer="oclc_4770057679_i30_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i31.TEIP5.xml"
-              xpointer="oclc_4770057679_i31_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i32.TEIP5.xml"
-              xpointer="oclc_4770057679_i32_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i33.TEIP5.xml"
-              xpointer="oclc_4770057679_i33_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i34.TEIP5.xml"
-              xpointer="oclc_4770057679_i34_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i35.TEIP5.xml"
-              xpointer="oclc_4770057679_i35_text"
+              xpointer="text"
               parse="xml"/>
           <xi:include href="oclc_4770057679_i36.TEIP5.xml"
-              xpointer="oclc_4770057679_i36_text"
+              xpointer="text"
               parse="xml"/>
       </group>
   </text>
