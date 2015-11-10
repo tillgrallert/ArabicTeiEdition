@@ -4,7 +4,7 @@ author: Till Grallert
 date: 2015-08-24
 ---
 
-<span syle="color:red">**attention**: development and all files of the *al-Muqtabas* project have moved to [https://github.com/tillgrallert/digital-muqtabas](https://github.com/tillgrallert/digital-muqtabas) on November 10, 2015.</span>
+<span style="color:red">**attention**: development and all files of the *al-Muqtabas* project have moved to [https://github.com/tillgrallert/digital-muqtabas](https://github.com/tillgrallert/digital-muqtabas) on November 10, 2015.</span>
 
 In the context of the current onslaught cultural artifacts in the Middle East face from the iconoclasts of the Islamic State, from the institutional neglect of states and elites, and from poverty and war, digital preservation efforts promise some relief as well as potential counter narratives. They might also be the only resolve for future education and rebuilding efforts once the wars in Syria, Iraq or Yemen come to an end. 
 
