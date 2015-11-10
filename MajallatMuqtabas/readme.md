@@ -1,7 +1,7 @@
 ---
 title: "TEI edition of *majallat al-muqtabas*"
 author: Till Grallert
-date: 2015-08-24
+date: 2015-11-10
 ---
 
 <span style="color:red">**attention**: development and all files of the *al-Muqtabas* project have moved to [https://github.com/tillgrallert/digital-muqtabas](https://github.com/tillgrallert/digital-muqtabas) on November 10, 2015.</span>
