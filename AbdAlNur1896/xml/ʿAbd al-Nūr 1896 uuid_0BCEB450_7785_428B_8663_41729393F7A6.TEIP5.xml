@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ar-Latn-x-ijmes">Amīn ʿAbd al-Nūr, <emph  style="font-style:italic">Tarjama wa-sharḥ qānūn al-abniyya wa-qarār al-istimlāk</emph> (Bayrūt: al-Maṭbaʿa al-adabiyya, 1896)</title>
+             <author>
+                 <persName xml:lang="ar-Latn-x-ijmes">Amīn ʿAbd al-Nūr</persName>
+             </author>
+             <author>
+                 <persName xml:lang="ar-Latn-x-ijmes">Niqūlā al-Naqqāsh</persName>
+             </author>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date when="2016-02-23">23 Feb. 2016</date>
+            </edition>
+            <respStmt>
+               <resp>Created the original TEI P5 XML file</resp>
+               <persName xml:id="pers_TG">Till Grallert</persName>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <p>This should be replaced with some description</p>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct xml:lang="ar-Latn-x-ijmes">
+               <monogr>
+                  <author>
+                     <surname>ʿAbd al-Nūr</surname>
+                     <forename>Amīn</forename>
+                  </author>
+                  <title level="m">tarjama wa sharḥ qānūn al-abniyya wa qarār al-istimlāk</title>
+                  <imprint>
+                     <publisher>al-Maṭbaʿa al-Adabiyya</publisher>
+                     <pubPlace>Bayrūt</pubPlace>
+                     <date when="1896">1896</date>
+                  </imprint>
+               </monogr>
+               <idno type="callNumber">Tb 1980</idno>
+               <idno type="CitationID">ʿAbdAlNūr 1896a</idno>
+               <idno type="SenteUUID">0BCEB450-7785-428B-8663-41729393F7A6</idno>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2016-02-23" who="#pTG">File created by automatic conversion from Sente XML.</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile/>
+   <group>
+      <text>
+          <front></front>
+          <body></body>
+      </text>
+       <text>
+           <front></front>
+           <body></body>
+       </text>
+   </group>
+</TEI>
