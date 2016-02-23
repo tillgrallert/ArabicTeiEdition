@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tss:senteContainer version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thirdstreetsoftware.com/SenteXML-1.0 SenteXML.xsd" xmlns:tss="http://www.thirdstreetsoftware.com/SenteXML-1.0" xmlns="http://www.thirdstreetsoftware.com/SenteXML-1.0" >
+<tss:library>
+<tss:references>
+<tss:reference>
+<tss:publicationType name="Book"/>
+<tss:authors>
+<tss:author role="Author"><tss:surname>ʿAbd al-Nūr</tss:surname><tss:forenames>Amīn</tss:forenames><tss:initials></tss:initials></tss:author>
+</tss:authors>
+<tss:dates>
+<tss:date type="Publication" year="1896"/>
+<tss:date type="Entry" day="22" month="2" year="2016"/>
+<tss:date type="Modification" day="22" month="2" year="2016"/>
+</tss:dates>
+<tss:characteristics>
+<tss:characteristic name="publicationTitle">tarjama wa sharḥ qānūn al-abniyya wa qarār al-istimlāk</tss:characteristic>
+<tss:characteristic name="abstractText">The work is mentioned by Hanssen 2005 and Weber 2009 for the translation of  building codes&lt;br&gt;# author:&lt;br&gt;Amīn ʿAbd al-Nūr was the municipal engineer of Beirut. The book is dedicated to Nuṣḥī Bey Efendi, Vali of Beirut&lt;br&gt;# price&lt;br&gt;the copy of the book cost 1 mecidiye&lt;br&gt;# content (p.3):&lt;br&gt;- a translation and comment of the 1882 building code&lt;br&gt;    + the law of Dhu II 1299 / 24 Tish I 1298 that abolished the one on roads and buildings of 7 Jum I 1280 and on the taxes on buildings of 10 Rab I 1280.&lt;br&gt;- translation and comment on the Decree on Expropriations for Public Benefit (*qarār al-istimlāk*) of 21 Jum I 1296 / 24 Tish II 1295 that abolished the law of 4 Raj 1272&lt;br&gt;   + according to a footnote on the title this is a reprint of Niqūlā al-Naqqāsh's translation&lt;br&gt;# reasons for producing another translation (p.2)&lt;br&gt;According to the dedication, the book was commissioned by Nuṣḥī Bey Efendi, vali of Beirut, when he saw that the available Arabic translation was not true to its Ottoman original. The translation was commissioned by provincial decision #190 of 5 Tish I 1311 and to be based on the Ottoman version published in Düstūr. Publication was approved by decision #412 of the provincial administration council on 9 Jum II 1313 / 5 Tish I 1311.&lt;br&gt;The project was supported by Muḥammad Efendi ʿAbdallah Beyhum and presented to the public (*ʿalā al-jumhūr*). </tss:characteristic>
+<tss:characteristic name="language">Arabic</tss:characteristic>
+<tss:characteristic name="publicationCountry">Bayrūt</tss:characteristic>
+<tss:characteristic name="publisher">al-Maṭbaʿa al-Adabiyya</tss:characteristic>
+<tss:characteristic name="status">Get Copy</tss:characteristic>
+<tss:characteristic name="UUID">0BCEB450-7785-428B-8663-41729393F7A6</tss:characteristic>
+<tss:characteristic name="call-num">Tb 1980</tss:characteristic>
+<tss:characteristic name="Standort">OIB, National Library of Israel</tss:characteristic>
+<tss:characteristic name="Translated title">Translation and Commentary of the Building Code and the Law on Expropriations</tss:characteristic>
+<tss:characteristic name="Citation identifier">ʿAbdAlNūr 1896a</tss:characteristic>
+</tss:characteristics>
+<tss:keywords>
+<tss:keyword assigner="Sente User Sebastian">19th century</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Arabic language</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Legal text</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">official records</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Ordered</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Ottoman Empire</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Ottoman Law</tss:keyword>
+<tss:keyword assigner="Sente User Sebastian">Source</tss:keyword>
+</tss:keywords>
+</tss:reference>
+</tss:references>
+</tss:library>
+</tss:senteContainer>
