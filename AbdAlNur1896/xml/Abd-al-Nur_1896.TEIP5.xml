@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online/xslt-boilerplate/custom.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/online-local-facsimiles/xslt-boilerplate/custom.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:lang="en">
         <fileDesc>
@@ -10,10 +10,18 @@
                 <author> <persName xml:lang="ar-Latn-x-ijmes">Niqūlā al-Naqqāsh</persName> </author>
             </titleStmt>
             <editionStmt>
-                <edition> <date when="2016-02-23">23 Feb. 2016</date> </edition>
+                <edition> <date when="2016-02-23">23 Feb. 2016</date></edition>
                 <respStmt>
-                    <resp>Created the original TEI P5 XML file</resp>
+                    <resp>TEI Edition</resp>
                     <persName xml:id="pers_TG">Till Grallert</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Transcription</resp>
+                    <persName>Till Grallert</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Scan of facsimile</resp>
+                    <persName>Eva-Maria Thiele</persName>
                 </respStmt>
             </editionStmt>
             <publicationStmt>
