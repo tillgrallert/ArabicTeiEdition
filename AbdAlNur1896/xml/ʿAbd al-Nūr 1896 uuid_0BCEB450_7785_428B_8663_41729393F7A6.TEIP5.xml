@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://rawgit.com/tillgrallert/tei-boilerplate-arabic-editions/master/xslt-boilerplate/custom.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader xml:lang="en">
       <fileDesc>
          <titleStmt>
             <title xml:lang="ar-Latn-x-ijmes">Amīn ʿAbd al-Nūr, <emph  style="font-style:italic">Tarjama wa-sharḥ qānūn al-abniyya wa-qarār al-istimlāk</emph> (Bayrūt: al-Maṭbaʿa al-adabiyya, 1896)</title>
@@ -36,6 +37,7 @@
                      <pubPlace>Bayrūt</pubPlace>
                      <date when="1896">1896</date>
                   </imprint>
+                   <biblScope unit="page" from="1" to="106">106</biblScope>
                </monogr>
                <idno type="callNumber">Tb 1980</idno>
                <idno type="CitationID">ʿAbdAlNūr 1896a</idno>
@@ -47,15 +49,57 @@
          <change when="2016-02-23" who="#pTG">File created by automatic conversion from Sente XML.</change>
       </revisionDesc>
    </teiHeader>
-   <facsimile/>
-   <group>
-      <text>
-          <front></front>
-          <body></body>
-      </text>
-       <text>
-           <front></front>
-           <body></body>
-       </text>
-   </group>
+   <facsimile>
+       <surface></surface>
+   </facsimile>
+<text xml:lang="ar">
+    <pb n="1" ed="print"/>
+    <front>
+        <div><bibl><title level="m">ترجمة وشرح<lb/>قانون الابنية<lb/>وقرار الاستملاك</title></bibl></div>
+        <pb n="2" ed="print"/>
+        <div>
+            <head>بيان وشكر</head>
+                <p>لما راى حضرة <gap/></p>
+                <p>ولما كانت معرفة <gap/></p>
+                <p>وفي هذا المقام <gap/></p>
+        </div>
+    </front>
+    <group>
+        <text>
+            <pb n="3" ed="print"/>
+            <front>
+                <div>
+                    <head>مقدمة وتعريف</head>
+                    <p/>
+                    <pb n="4" ed="print"/>
+                </div>
+            </front>
+            <body>
+                <pb n="6" ed="print"/>
+                <div type="section">
+                    <head>الفصل الاول</head>
+                    <head>سعة الطرق</head>
+                </div>
+            </body>
+        </text>
+        <text>
+            <pb n="84" ed="print"/>
+            <front>
+                <head>متن وشرح قرار الاستملاك<lb/>لاجل<lb/>المنافع العمومية</head>
+                <pb n="85" ed="print"/>
+                <div>
+                    <head>قرار الاستملاك<note n="1" type="footnote">ان متن هذا القرار وجد مترجماً بقلم الماسوف فقيد الوطن المرحوم
+                            <persName>نقولا نقاش</persName></note></head>
+                    <pb n="86" ed="print"/>
+                </div>
+            </front>
+            <body>
+                <pb n="87" ed="print"/>
+                <div>
+                    <head>الفصل الاول <lb/>احكام عمومية</head>
+                </div>
+            </body>
+        </text>
+    </group>
+</text>
 </TEI>
