@@ -8,9 +8,6 @@
                     wa-qarār al-istimlāk</emph> (Bayrūt: al-Maṭbaʿa al-adabiyya, 1896)</title>
                 <author> <persName xml:lang="ar-Latn-x-ijmes">Amīn ʿAbd al-Nūr</persName> </author>
                 <author> <persName xml:lang="ar-Latn-x-ijmes">Niqūlā al-Naqqāsh</persName> </author>
-            </titleStmt>
-            <editionStmt>
-                <edition> <date when="2016-02-23">23 Feb. 2016</date></edition>
                 <respStmt>
                     <resp>TEI Edition</resp>
                     <persName xml:id="pers_TG">Till Grallert</persName>
@@ -23,6 +20,9 @@
                     <resp>Scan of facsimile</resp>
                     <persName>Eva-Maria Thiele</persName>
                 </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition> <date when="2016-02-23">23 Feb. 2016</date></edition>
             </editionStmt>
             <publicationStmt>
                 <p>This should be replaced with some description</p>
