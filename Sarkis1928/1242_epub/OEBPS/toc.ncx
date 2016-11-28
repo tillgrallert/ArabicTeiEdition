@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+   "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+        <meta name="dtb:uid" content="b7863ffc9dd21946d047a19af8388308"/>
+        <meta name="dtb:depth" content="2"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text>معجم المطبوعات العربية والمعربة</text>
+    </docTitle>
+    <docAuthor>
+        <text>اليان سركيس</text>
+    </docAuthor>
+    <navMap>
+    	<navPoint id="info" playOrder="1"><navLabel><text>بطاقة الكتاب</text></navLabel><content src="xhtml/info.xhtml"/></navPoint>
+        <navPoint id="C1" playOrder="2"><navLabel><text>المقدمة</text></navLabel><content src="xhtml/P3.xhtml#C1"/></navPoint><navPoint id="C2" playOrder="3"><navLabel><text>حرف الألف</text></navLabel><content src="xhtml/P7.xhtml#C2"/></navPoint><navPoint id="C3" playOrder="4"><navLabel><text>حرف الباء</text></navLabel><content src="xhtml/P509.xhtml#C3"/></navPoint><navPoint id="C4" playOrder="5"><navLabel><text>حرف التاء</text></navLabel><content src="xhtml/P630.xhtml#C4"/></navPoint><navPoint id="C5" playOrder="6"><navLabel><text>حرف الثاء</text></navLabel><content src="xhtml/P659.xhtml#C5"/></navPoint><navPoint id="C6" playOrder="7"><navLabel><text>حرف الجيم</text></navLabel><content src="xhtml/P670.xhtml#C6"/></navPoint><navPoint id="C7" playOrder="8"><navLabel><text>حرف الحاء</text></navLabel><content src="xhtml/P736.xhtml#C7"/></navPoint><navPoint id="C8" playOrder="9"><navLabel><text>حرف الدال</text></navLabel><content src="xhtml/P862.xhtml#C8"/></navPoint><navPoint id="C9" playOrder="10"><navLabel><text>حرف الذال</text></navLabel><content src="xhtml/P914.xhtml#C9"/></navPoint><navPoint id="C10" playOrder="11"><navLabel><text>حرف الراء</text></navLabel><content src="xhtml/P919.xhtml#C10"/></navPoint><navPoint id="C11" playOrder="12"><navLabel><text>حرف الزاي</text></navLabel><content src="xhtml/P967.xhtml#C11"/></navPoint><navPoint id="C12" playOrder="13"><navLabel><text>حرف السين</text></navLabel><content src="xhtml/P1001.xhtml#C12"/></navPoint><navPoint id="C13" playOrder="14"><navLabel><text>حرف الشين</text></navLabel><content src="xhtml/P1094.xhtml#C13"/></navPoint><navPoint id="C14" playOrder="15"><navLabel><text>حرف الصاد</text></navLabel><content src="xhtml/P1183.xhtml#C14"/></navPoint><navPoint id="C15" playOrder="16"><navLabel><text>حرف الضاد</text></navLabel><content src="xhtml/P1225.xhtml#C15"/></navPoint><navPoint id="C16" playOrder="17"><navLabel><text>حرف الطاء</text></navLabel><content src="xhtml/P1227.xhtml#C16"/></navPoint><navPoint id="C17" playOrder="18"><navLabel><text>حرف الظاء</text></navLabel><content src="xhtml/P1261.xhtml#C17"/></navPoint><navPoint id="C18" playOrder="19"><navLabel><text>حرف العين</text></navLabel><content src="xhtml/P1262.xhtml#C18"/></navPoint><navPoint id="C19" playOrder="20"><navLabel><text>حرف الغين</text></navLabel><content src="xhtml/P1411.xhtml#C19"/></navPoint><navPoint id="C20" playOrder="21"><navLabel><text>حرف الفاء</text></navLabel><content src="xhtml/P1428.xhtml#C20"/></navPoint><navPoint id="C21" playOrder="22"><navLabel><text>حرف القاف</text></navLabel><content src="xhtml/P1484.xhtml#C21"/></navPoint><navPoint id="C22" playOrder="23"><navLabel><text>حرف الكاف</text></navLabel><content src="xhtml/P1543.xhtml#C22"/></navPoint><navPoint id="C23" playOrder="24"><navLabel><text>حرف اللام</text></navLabel><content src="xhtml/P1589.xhtml#C23"/></navPoint><navPoint id="C24" playOrder="25"><navLabel><text>حرف الميم</text></navLabel><content src="xhtml/P1607.xhtml#C24"/></navPoint><navPoint id="C25" playOrder="26"><navLabel><text>حرف النون</text></navLabel><content src="xhtml/P1838.xhtml#C25"/></navPoint><navPoint id="C26" playOrder="27"><navLabel><text>حرف الهاء</text></navLabel><content src="xhtml/P1892.xhtml#C26"/></navPoint><navPoint id="C27" playOrder="28"><navLabel><text>حرف الواو</text></navLabel><content src="xhtml/P1910.xhtml#C27"/></navPoint><navPoint id="C28" playOrder="29"><navLabel><text>حرف الياء</text></navLabel><content src="xhtml/P1933.xhtml#C28"/></navPoint>
+    </navMap>
+</ncx>
